@@ -7,7 +7,7 @@ else
 fi
 
 for i in $args; do
-    g++ main.cpp -o main 2> /dev/null
+    g++ main.cpp -o main #2> /dev/null
     ./main "$i" > "Test/output$i.txt"
 
     if ! diff "Test/output$i.txt" "Test/expected$i.txt" > /dev/null; then
